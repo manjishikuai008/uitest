@@ -1,124 +1,793 @@
-2020-01-30 00:51:52,858 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 00:51:52,859 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 00:51:52,860 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 00:51:53,006 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Q3hd6QhLGVJIHmZrE7JZGj27m-OGG_Pw9YQL643Fj8s'}
-2020-01-30 00:51:53,006 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:53,009 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 00:51:53,094 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:53,097 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 00:51:53,097 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:51:53,097 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:51:53,098 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Q3hd6QhLGVJIHmZrE7JZGj27m-OGG_Pw9YQL643Fj8s'}
-2020-01-30 00:51:54,128 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.aEU2eDO4iP14_3Evqr6-fHLEPDLO-9MoTNEzldAiE5s'}
-2020-01-30 00:51:54,128 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:54,130 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.aEU2eDO4iP14_3Evqr6-fHLEPDLO-9MoTNEzldAiE5s'}
-2020-01-30 00:51:54,638 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:54,641 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222563530117480448], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.aEU2eDO4iP14_3Evqr6-fHLEPDLO-9MoTNEzldAiE5s'}
-2020-01-30 00:51:54,858 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:54,936 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQwMzYsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.QbHIT0lOgTHDVTGe4nxCbsKE0wk4R3YRvXxIQKPAmZ4'}
-2020-01-30 00:51:54,937 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:51:54,984 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:08,309 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 00:55:08,309 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 00:55:08,310 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 00:55:08,388 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMzEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.fEaNXZU4tYH8CFsUkEkVmKKU0YMR0HwssuoRfb2X3-U'}
-2020-01-30 00:55:08,389 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:08,392 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 00:55:08,453 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:08,456 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 00:55:08,456 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:08,456 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:08,457 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMzEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.fEaNXZU4tYH8CFsUkEkVmKKU0YMR0HwssuoRfb2X3-U'}
-2020-01-30 00:55:08,647 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.IB7ax9DVSTmFUEzrJemvo60I0kp_isWg3uaJggo6wDg'}
-2020-01-30 00:55:08,647 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:08,650 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.IB7ax9DVSTmFUEzrJemvo60I0kp_isWg3uaJggo6wDg'}
-2020-01-30 00:55:09,170 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:09,173 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222564349537681408], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.IB7ax9DVSTmFUEzrJemvo60I0kp_isWg3uaJggo6wDg'}
-2020-01-30 00:55:09,272 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:09,331 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyMzEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.hgGhcu8ZvvkPrsKVyMKLKghTE_XpD5YsxVSLG3ha8Hw'}
-2020-01-30 00:55:09,331 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:09,450 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:35,077 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 00:55:35,078 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 00:55:35,079 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 00:55:35,154 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.dFsjbUh7hYKTWisMZSTGEiAfBHu4L2WHcMos8HH1qi0'}
-2020-01-30 00:55:35,154 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:35,157 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 00:55:35,216 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:35,218 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 00:55:35,218 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:35,218 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:35,218 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.dFsjbUh7hYKTWisMZSTGEiAfBHu4L2WHcMos8HH1qi0'}
-2020-01-30 00:55:35,381 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.T-8oqSGsb84RIdW9-EGl0ofNIAnloRwGo5ci8AWdV0E'}
-2020-01-30 00:55:35,381 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:35,384 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.T-8oqSGsb84RIdW9-EGl0ofNIAnloRwGo5ci8AWdV0E'}
-2020-01-30 00:55:35,983 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:35,986 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222564461794033664], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTYsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.T-8oqSGsb84RIdW9-EGl0ofNIAnloRwGo5ci8AWdV0E'}
-2020-01-30 00:55:36,110 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:36,171 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNTgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.obCQWTe5JZ5FgtYYNc3_xwIR0RdMOaNgn0dh17doAPA'}
-2020-01-30 00:55:36,171 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:36,310 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:46,475 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 00:55:46,475 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 00:55:46,476 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 00:55:46,552 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.o-BIDo7T_Q-Dfeh3oSi-PMNZlftR2-slOxQJZfZ2tdQ'}
-2020-01-30 00:55:46,552 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:46,555 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 00:55:46,616 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:46,619 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 00:55:46,619 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:46,619 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 00:55:46,620 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.o-BIDo7T_Q-Dfeh3oSi-PMNZlftR2-slOxQJZfZ2tdQ'}
-2020-01-30 00:55:46,810 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.BtstR6-equcv2hF9vQhgLxth-PM3ntPdxlo0sl2Y5pk'}
-2020-01-30 00:55:46,810 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:46,813 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.BtstR6-equcv2hF9vQhgLxth-PM3ntPdxlo0sl2Y5pk'}
-2020-01-30 00:55:47,442 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:47,445 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222564509600710656], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjksImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.BtstR6-equcv2hF9vQhgLxth-PM3ntPdxlo0sl2Y5pk'}
-2020-01-30 00:55:47,577 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:47,643 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQyNjgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.KUFPxuCcmG3lFaxW6zb-Z9Gkysr5VtAWaCMJ_6DyZ9E'}
-2020-01-30 00:55:47,643 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 00:55:47,788 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:05,961 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 01:05:05,961 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 01:05:05,963 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 01:05:06,078 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.k6n1WeR37HCwr06MxbFwQdO9L8AvprmTUcgBV6btGK0'}
-2020-01-30 01:05:06,078 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:06,081 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 01:05:06,147 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:06,150 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 01:05:06,150 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 01:05:06,150 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 01:05:06,151 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.k6n1WeR37HCwr06MxbFwQdO9L8AvprmTUcgBV6btGK0'}
-2020-01-30 01:05:06,308 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.zOOiZxG-cbMrUDoxaZEyQvtfB4UGHMZRygSRHqxzWBY'}
-2020-01-30 01:05:06,309 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:06,312 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.zOOiZxG-cbMrUDoxaZEyQvtfB4UGHMZRygSRHqxzWBY'}
-2020-01-30 01:05:06,886 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:06,888 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222566856527708160], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.zOOiZxG-cbMrUDoxaZEyQvtfB4UGHMZRygSRHqxzWBY'}
-2020-01-30 01:05:07,040 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:07,101 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjQ4MjksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.CB8QUIWUURYI0J8_EGYOgrNcH1lKUoJ-3baTroN4_r4'}
-2020-01-30 01:05:07,102 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:05:07,235 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:08,160 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
-2020-01-30 01:19:08,160 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
-2020-01-30 01:19:08,161 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
-2020-01-30 01:19:08,279 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NjksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.-Epn3j6p_ohOwDa8n6jF6ziScap2YhlQMtKfFZm42Bg'}
-2020-01-30 01:19:08,279 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:08,283 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
-2020-01-30 01:19:08,350 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:08,353 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
-2020-01-30 01:19:08,353 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 01:19:08,353 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
-2020-01-30 01:19:08,354 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NjksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.-Epn3j6p_ohOwDa8n6jF6ziScap2YhlQMtKfFZm42Bg'}
-2020-01-30 01:19:08,522 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzEsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.gv6vj0lKv6VSdkfwYouCQ6jozcl5nDMCdpk0dXlz5nE'}
-2020-01-30 01:19:08,522 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:08,525 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzEsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.gv6vj0lKv6VSdkfwYouCQ6jozcl5nDMCdpk0dXlz5nE'}
-2020-01-30 01:19:09,063 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:09,066 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1222570395404599296], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzEsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.gv6vj0lKv6VSdkfwYouCQ6jozcl5nDMCdpk0dXlz5nE'}
-2020-01-30 01:19:09,194 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:09,197 INFO [api_app.py(__init__:15)] - 正在初始化app应用登录url: http://ttapi.research.itcast.cn/app/v1_0/authorizations
-2020-01-30 01:19:09,197 INFO [api_app.py(__init__:18)] - 正在初始化app应用查询频道下所有文章url: http://ttapi.research.itcast.cn/app/v1_1/articles
-2020-01-30 01:19:09,198 INFO [api_app.py(api_app_login:24)] - 正在调用app登录接口方法，请求参数：{'mobile': '13812345678', 'code': '246810'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzEsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.gv6vj0lKv6VSdkfwYouCQ6jozcl5nDMCdpk0dXlz5nE'}
-2020-01-30 01:19:09,252 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.ij4N-RP6M04Km6KE3xgtHVwFJKjIKtjWopCHgd1Qrzs'}
-2020-01-30 01:19:09,252 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
-2020-01-30 01:19:09,255 INFO [api_app.py(api_app_article:38)] - 正在调用app查询指定频道下所有文章接口方法，请求参数：{'channel_id': '7', 'timestamp': 1580318349, 'with_top': 1} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODAzMjU2NzIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.ij4N-RP6M04Km6KE3xgtHVwFJKjIKtjWopCHgd1Qrzs'}
-2020-01-30 01:19:09,352 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:55,107 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
+2020-01-31 07:52:55,108 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
+2020-01-31 07:52:55,108 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 07:52:55,271 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.eW60fepcGlxZO9i7y36DtjXJzlvH1Dx69TGyHc_MArY'}
+2020-01-31 07:52:55,271 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:55,275 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 07:52:55,347 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:55,350 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
+2020-01-31 07:52:55,350 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
+2020-01-31 07:52:55,350 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
+2020-01-31 07:52:55,351 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.eW60fepcGlxZO9i7y36DtjXJzlvH1Dx69TGyHc_MArY'}
+2020-01-31 07:52:55,502 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.WAygIPhaVEc4N_qc_shSgEGVgV0WaVPnJaMzk9lLwTQ'}
+2020-01-31 07:52:55,502 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:55,506 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.WAygIPhaVEc4N_qc_shSgEGVgV0WaVPnJaMzk9lLwTQ'}
+2020-01-31 07:52:56,079 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:56,082 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1223031883399430144], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.WAygIPhaVEc4N_qc_shSgEGVgV0WaVPnJaMzk9lLwTQ'}
+2020-01-31 07:52:56,176 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:56,179 INFO [api_app.py(__init__:15)] - 正在初始化app应用登录url: http://ttapi.research.itcast.cn/app/v1_0/authorizations
+2020-01-31 07:52:56,179 INFO [api_app.py(__init__:18)] - 正在初始化app应用查询频道下所有文章url: http://ttapi.research.itcast.cn/app/v1_1/articles
+2020-01-31 07:52:56,180 INFO [api_app.py(api_app_login:24)] - 正在调用app登录接口方法，请求参数：{'mobile': '13812345678', 'code': '246810'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.WAygIPhaVEc4N_qc_shSgEGVgV0WaVPnJaMzk9lLwTQ'}
+2020-01-31 07:52:56,240 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.i9ccRXUkP0_k50XM8_3p8CFNRReDRjfp6WUT3oLKqmo'}
+2020-01-31 07:52:56,240 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:52:56,243 INFO [api_app.py(api_app_article:38)] - 正在调用app查询指定频道下所有文章接口方法，请求参数：{'channel_id': '7', 'timestamp': 1580428376, 'with_top': 1} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU2OTksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.i9ccRXUkP0_k50XM8_3p8CFNRReDRjfp6WUT3oLKqmo'}
+2020-01-31 07:52:56,438 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:33,974 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: http://ttapi.research.itcast.cn/mp/v1_0/authorizations
+2020-01-31 07:53:33,974 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: http://ttapi.research.itcast.cn/mp/v1_0/articles
+2020-01-31 07:53:33,975 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 07:53:34,044 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.h1x1iGc5w1d-iStv2yMCJHJJGk-Td2DERqAYRii8aOk'}
+2020-01-31 07:53:34,045 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:34,048 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 07:53:34,115 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:34,119 INFO [api_mis.py(__init__:14)] - 正在初始化后台管理系统 登录url: http://ttapi.research.itcast.cn/mis/v1_0/authorizations
+2020-01-31 07:53:34,119 INFO [api_mis.py(__init__:17)] - 正在初始化后台管理系统 查询文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
+2020-01-31 07:53:34,119 INFO [api_mis.py(__init__:20)] - 正在初始化后台管理系统 审核文章url: http://ttapi.research.itcast.cn/mis/v1_0/articles
+2020-01-31 07:53:34,119 INFO [api_mis.py(api_mis_login:31)] - 正在调用后台管理系统 登录接口，请求数据: {'account': 'testid', 'password': 'testpwd123'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.h1x1iGc5w1d-iStv2yMCJHJJGk-Td2DERqAYRii8aOk'}
+2020-01-31 07:53:34,275 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.JGUPWIYTLBwnMtD6nY57-gZbe3LNEPrNsL1UGS3_4_A'}
+2020-01-31 07:53:34,276 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:34,279 INFO [api_mis.py(api_mis_search:44)] - 正在调用后台管理系统 查询文章接口，请求数据: {'title': 'test-inter-001', 'channel': '数据库'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.JGUPWIYTLBwnMtD6nY57-gZbe3LNEPrNsL1UGS3_4_A'}
+2020-01-31 07:53:34,767 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:34,770 INFO [api_mis.py(api_mis_audit:57)] - 正在调用后台管理系统 审核文章接口，请求数据: {'article_ids': [1223032047648374784], 'status': 2} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.JGUPWIYTLBwnMtD6nY57-gZbe3LNEPrNsL1UGS3_4_A'}
+2020-01-31 07:53:34,960 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:34,963 INFO [api_app.py(__init__:15)] - 正在初始化app应用登录url: http://ttapi.research.itcast.cn/app/v1_0/authorizations
+2020-01-31 07:53:34,963 INFO [api_app.py(__init__:18)] - 正在初始化app应用查询频道下所有文章url: http://ttapi.research.itcast.cn/app/v1_1/articles
+2020-01-31 07:53:34,964 INFO [api_app.py(api_app_login:24)] - 正在调用app登录接口方法，请求参数：{'mobile': '13812345678', 'code': '246810'} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzgsImFkbWluaXN0cmF0b3JfaWQiOjIsInJlZnJlc2giOmZhbHNlfQ.JGUPWIYTLBwnMtD6nY57-gZbe3LNEPrNsL1UGS3_4_A'}
+2020-01-31 07:53:35,026 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.bMkWoe8Lo3hzrnLpdxYfZTAWxbl72EA1DPD4Co5vWw8'}
+2020-01-31 07:53:35,026 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 07:53:35,029 INFO [api_app.py(api_app_article:38)] - 正在调用app查询指定频道下所有文章接口方法，请求参数：{'channel_id': '7', 'timestamp': 1580428415, 'with_top': 1} 请求信息头：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzU3MzksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlfQ.bMkWoe8Lo3hzrnLpdxYfZTAWxbl72EA1DPD4Co5vWw8'}
+2020-01-31 07:53:35,176 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:06:33,893 INFO [main.py(main:486)] - Starting web monitor at *:8089
+2020-01-31 08:06:33,894 INFO [main.py(main:553)] - Starting Locust 0.11.0
+2020-01-31 08:06:55,059 INFO [runners.py(spawn_locusts:99)] - Hatching and swarming 1 clients at the rate 1 clients/s...
+2020-01-31 08:06:55,059 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: /mp/v1_0/authorizations
+2020-01-31 08:06:55,060 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: /mp/v1_0/articles
+2020-01-31 08:06:55,060 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:06:55,167 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 49, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:06:56,060 INFO [runners.py(hatch:106)] - All locusts hatched: UserRun: 1
+2020-01-31 08:06:56,168 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:06:56,206 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 49, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:06:57,207 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:06:57,256 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - 
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.f5COuS6qSJyukCW5wGT0ASG1lFarj-62sJ1qJeHrFbU', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - 
+2020-01-31 08:06:57,257 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ'}
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - 
+2020-01-31 08:06:57,257 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ'}
+2020-01-31 08:06:57,258 INFO [log.py(write:26)] - 
+2020-01-31 08:06:57,258 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:06:58,263 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:06:58,306 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:06:58,306 INFO [log.py(write:26)] - 
+2020-01-31 08:06:58,306 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.f5COuS6qSJyukCW5wGT0ASG1lFarj-62sJ1qJeHrFbU', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:06:58,306 INFO [log.py(write:26)] - 
+2020-01-31 08:06:58,306 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ'}
+2020-01-31 08:06:58,307 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:06:58,307 INFO [log.py(write:26)] - 
+2020-01-31 08:06:58,307 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.rY8ymPN0LMGoA37SXCqNiWzbKt-ngCd0UTMslJqgRZQ'}
+2020-01-31 08:06:58,307 INFO [log.py(write:26)] - 
+2020-01-31 08:06:58,307 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:06:59,312 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:06:59,362 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:06:59,362 INFO [log.py(write:26)] - 
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.gL2I11OpLPusihX9F8vfezhcocjlxabZILeTd1MRApg', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NDIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.cwKPN4_5pLWDQV-MRwghjKlIaEkm-OHLmu4ipfg0yXo', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - 
+2020-01-31 08:06:59,363 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.gL2I11OpLPusihX9F8vfezhcocjlxabZILeTd1MRApg'}
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - 
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.gL2I11OpLPusihX9F8vfezhcocjlxabZILeTd1MRApg'}
+2020-01-31 08:06:59,363 INFO [log.py(write:26)] - 
+2020-01-31 08:06:59,364 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:00,367 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:07:00,416 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:07:00,416 INFO [log.py(write:26)] - 
+2020-01-31 08:07:00,416 INFO [log.py(write:26)] - 1223035427917660160
+2020-01-31 08:07:00,417 INFO [log.py(write:26)] - 
+2020-01-31 08:07:00,417 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:01,421 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:07:01,468 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:07:01,468 INFO [log.py(write:26)] - 
+2020-01-31 08:07:01,468 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.w78Hbg-2iNZ9nNa5dLcuKCqI6ls-PGbSFIb1TYJpIeY', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NDUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.n1O8EvHwt1Wz7s6WjQJLiIzf9NEOZddI8Lx5Gcbz9OY', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:07:01,468 INFO [log.py(write:26)] - 
+2020-01-31 08:07:01,468 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.w78Hbg-2iNZ9nNa5dLcuKCqI6ls-PGbSFIb1TYJpIeY'}
+2020-01-31 08:07:01,469 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:07:01,469 INFO [log.py(write:26)] - 
+2020-01-31 08:07:01,469 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NDUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.w78Hbg-2iNZ9nNa5dLcuKCqI6ls-PGbSFIb1TYJpIeY'}
+2020-01-31 08:07:01,469 INFO [log.py(write:26)] - 
+2020-01-31 08:07:01,469 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:02,475 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:07:02,525 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:07:02,525 INFO [log.py(write:26)] - 
+2020-01-31 08:07:02,526 INFO [log.py(write:26)] - 1223035443180732416
+2020-01-31 08:07:02,526 INFO [log.py(write:26)] - 
+2020-01-31 08:07:02,526 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:03,531 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:07:03,572 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:07:03,573 INFO [log.py(write:26)] - 
+2020-01-31 08:07:03,573 INFO [log.py(write:26)] - 1223035441167466496
+2020-01-31 08:07:03,573 INFO [log.py(write:26)] - 
+2020-01-31 08:07:03,573 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:04,578 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:07:04,634 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:07:04,634 INFO [log.py(write:26)] - 
+2020-01-31 08:07:04,634 INFO [log.py(write:26)] - 1223035447261790208
+2020-01-31 08:07:04,634 INFO [log.py(write:26)] - 
+2020-01-31 08:07:04,635 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:05,639 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:07:05,685 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:07:05,686 INFO [log.py(write:26)] - 
+2020-01-31 08:07:05,686 INFO [log.py(write:26)] - 1223035450021642240
+2020-01-31 08:07:05,686 INFO [log.py(write:26)] - 
+2020-01-31 08:07:05,686 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:06,691 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:07:06,736 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:07:06,736 INFO [log.py(write:26)] - 
+2020-01-31 08:07:06,736 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.78IQUaH3xvpxnggRaxSxjqU6ql4F56ZyVvKMaKHtBYA', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NTAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.dDN8gnhq7ALKol6Bvx-UrSfF6aJwBX4NXsEdNd2hN4g', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:07:06,736 INFO [log.py(write:26)] - 
+2020-01-31 08:07:06,736 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.78IQUaH3xvpxnggRaxSxjqU6ql4F56ZyVvKMaKHtBYA'}
+2020-01-31 08:07:06,737 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:07:06,737 INFO [log.py(write:26)] - 
+2020-01-31 08:07:06,737 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.78IQUaH3xvpxnggRaxSxjqU6ql4F56ZyVvKMaKHtBYA'}
+2020-01-31 08:07:06,737 INFO [log.py(write:26)] - 
+2020-01-31 08:07:06,737 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:07,738 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:07:07,783 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:07:07,783 INFO [log.py(write:26)] - 
+2020-01-31 08:07:07,783 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.zqqTb8aIP6k7jLowSFJwgkC_v6RnO2uqDo3YimPPI1I', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:07:07,783 INFO [log.py(write:26)] - 
+2020-01-31 08:07:07,783 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4'}
+2020-01-31 08:07:07,784 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:07:07,784 INFO [log.py(write:26)] - 
+2020-01-31 08:07:07,784 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4'}
+2020-01-31 08:07:07,784 INFO [log.py(write:26)] - 
+2020-01-31 08:07:07,784 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:08,790 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:07:08,834 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:07:08,835 INFO [log.py(write:26)] - 
+2020-01-31 08:07:08,835 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzg5NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.zqqTb8aIP6k7jLowSFJwgkC_v6RnO2uqDo3YimPPI1I', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:07:08,835 INFO [log.py(write:26)] - 
+2020-01-31 08:07:08,835 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4'}
+2020-01-31 08:07:08,836 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:07:08,836 INFO [log.py(write:26)] - 
+2020-01-31 08:07:08,836 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0MzY1NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.sJZpZuB_ByjFlsOc8HkEkFw6-lyb7LNgZJvs8OngLS4'}
+2020-01-31 08:07:08,836 INFO [log.py(write:26)] - 
+2020-01-31 08:07:08,836 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:07:09,781 ERROR [log.py(write:37)] - KeyboardInterrupt
+2020-01-31 08:07:09,782 ERROR [log.py(write:37)] - 2020-01-31T00:07:09Z
+2020-01-31 08:07:09,782 ERROR [log.py(write:37)] - 
+2020-01-31 08:07:09,783 INFO [main.py(shutdown:532)] - Shutting down (exit code 0), bye.
+2020-01-31 08:07:09,783 INFO [main.py(shutdown:534)] - Cleaning up runner...
+2020-01-31 08:07:09,786 INFO [main.py(shutdown:537)] - Running teardowns...
+2020-01-31 08:13:59,170 INFO [main.py(main:486)] - Starting web monitor at *:8089
+2020-01-31 08:13:59,170 INFO [main.py(main:553)] - Starting Locust 0.11.0
+2020-01-31 08:14:21,032 INFO [runners.py(spawn_locusts:99)] - Hatching and swarming 1 clients at the rate 1 clients/s...
+2020-01-31 08:14:21,033 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: /mp/v1_0/authorizations
+2020-01-31 08:14:21,033 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: /mp/v1_0/articles
+2020-01-31 08:14:21,033 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:21,120 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:22,035 INFO [runners.py(hatch:106)] - All locusts hatched: UserRun: 1
+2020-01-31 08:14:22,123 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:23,125 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:24,127 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:25,128 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:26,128 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:26,170 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:27,172 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:27,215 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:28,218 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:29,222 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:30,227 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:31,231 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:32,234 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:33,239 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:33,273 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:34,273 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:34,309 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:35,311 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:36,313 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:36,351 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:37,353 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:37,402 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:38,405 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:39,410 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:40,415 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:41,419 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+TypeError: test01_mp_login() missing 2 required positional arguments: 'mobile' and 'code'
+2020-01-31 08:14:42,420 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:42,456 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:43,457 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:14:43,514 ERROR [log.py(write:37)] - Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 361, in run
+    self.execute_next_task()
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 387, in execute_next_task
+    self.execute_task(task["callable"], *task["args"], **task["kwargs"])
+  File "/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/locust/core.py", line 399, in execute_task
+    task(self, *args, **kwargs)
+  File "/Users/lgy/Documents/传智/视频/双元/黑马头条双元/资料/性能脚本/locust实现黑马头条demo/apiAutoTestHmtt/scripts/test01_mp.py", line 50, in test02_mp_article
+    api.article_id = r.json().get("data").get("id")
+AttributeError: 'NoneType' object has no attribute 'get'
+2020-01-31 08:14:43,720 ERROR [log.py(write:37)] - KeyboardInterrupt
+2020-01-31 08:14:43,720 ERROR [log.py(write:37)] - 2020-01-31T00:14:43Z
+2020-01-31 08:14:43,720 ERROR [log.py(write:37)] - 
+2020-01-31 08:14:43,720 INFO [main.py(shutdown:532)] - Shutting down (exit code 0), bye.
+2020-01-31 08:14:43,720 INFO [main.py(shutdown:534)] - Cleaning up runner...
+2020-01-31 08:14:43,721 INFO [main.py(shutdown:537)] - Running teardowns...
+2020-01-31 08:21:36,349 INFO [main.py(main:486)] - Starting web monitor at *:8089
+2020-01-31 08:21:36,350 INFO [main.py(main:553)] - Starting Locust 0.11.0
+2020-01-31 08:21:57,196 INFO [runners.py(spawn_locusts:99)] - Hatching and swarming 1 clients at the rate 1 clients/s...
+2020-01-31 08:21:57,197 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: /mp/v1_0/authorizations
+2020-01-31 08:21:57,197 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: /mp/v1_0/articles
+2020-01-31 08:21:57,197 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:21:57,309 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:21:57,309 INFO [log.py(write:26)] - 
+2020-01-31 08:21:57,309 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.KaEtCv6Llz7Q8MIp6Xs5JxUEBv5aaQMFdnUCfLM3vGk', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NDAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.-52Md-nwdoF7TH0pNFPAN0gRyfwL_UIMN5-D2VY-njI', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:21:57,310 INFO [log.py(write:26)] - 
+2020-01-31 08:21:57,310 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.KaEtCv6Llz7Q8MIp6Xs5JxUEBv5aaQMFdnUCfLM3vGk'}
+2020-01-31 08:21:57,310 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:21:57,310 INFO [log.py(write:26)] - 
+2020-01-31 08:21:57,310 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDAsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.KaEtCv6Llz7Q8MIp6Xs5JxUEBv5aaQMFdnUCfLM3vGk'}
+2020-01-31 08:21:57,310 INFO [log.py(write:26)] - 
+2020-01-31 08:21:57,311 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:21:58,200 INFO [runners.py(hatch:106)] - All locusts hatched: UserRun: 1
+2020-01-31 08:21:58,316 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:21:58,360 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:21:58,360 INFO [log.py(write:26)] - 
+2020-01-31 08:21:58,360 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.U3gyVS37UkOcUA-1qo0GKX3_K13MgCA_LVbVPvRMDFE', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.cBTV5OdaKcqH64xUU0SmFjHUOmNJbVvhwa8wqmbHmJM', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:21:58,360 INFO [log.py(write:26)] - 
+2020-01-31 08:21:58,360 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.U3gyVS37UkOcUA-1qo0GKX3_K13MgCA_LVbVPvRMDFE'}
+2020-01-31 08:21:58,360 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:21:58,361 INFO [log.py(write:26)] - 
+2020-01-31 08:21:58,361 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.U3gyVS37UkOcUA-1qo0GKX3_K13MgCA_LVbVPvRMDFE'}
+2020-01-31 08:21:58,361 INFO [log.py(write:26)] - 
+2020-01-31 08:21:58,361 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:21:59,361 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:21:59,411 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:21:59,411 INFO [log.py(write:26)] - 
+2020-01-31 08:21:59,412 INFO [log.py(write:26)] - 1223039200358563840
+2020-01-31 08:21:59,412 INFO [log.py(write:26)] - 
+2020-01-31 08:21:59,412 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:00,413 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:00,466 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:00,466 INFO [log.py(write:26)] - 
+2020-01-31 08:22:00,466 INFO [log.py(write:26)] - 1223039209523118080
+2020-01-31 08:22:00,467 INFO [log.py(write:26)] - 
+2020-01-31 08:22:00,467 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:01,469 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:22:01,510 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:22:01,510 INFO [log.py(write:26)] - 
+2020-01-31 08:22:01,510 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.jv9bKFqahqUimprNzC7Q2kjVbCwv_4y7Ig9qqvfxP1E', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NDQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.rAPckjKF-T4k7SWDvI6o4lEl9-yG1gFO5Iq61GN3Moc', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:22:01,510 INFO [log.py(write:26)] - 
+2020-01-31 08:22:01,510 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.jv9bKFqahqUimprNzC7Q2kjVbCwv_4y7Ig9qqvfxP1E'}
+2020-01-31 08:22:01,511 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:22:01,511 INFO [log.py(write:26)] - 
+2020-01-31 08:22:01,511 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.jv9bKFqahqUimprNzC7Q2kjVbCwv_4y7Ig9qqvfxP1E'}
+2020-01-31 08:22:01,511 INFO [log.py(write:26)] - 
+2020-01-31 08:22:01,511 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:02,514 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:02,566 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:02,566 INFO [log.py(write:26)] - 
+2020-01-31 08:22:02,566 INFO [log.py(write:26)] - 1223039213595787264
+2020-01-31 08:22:02,566 INFO [log.py(write:26)] - 
+2020-01-31 08:22:02,566 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:03,571 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:03,619 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:03,619 INFO [log.py(write:26)] - 
+2020-01-31 08:22:03,619 INFO [log.py(write:26)] - 1223039216343056384
+2020-01-31 08:22:03,619 INFO [log.py(write:26)] - 
+2020-01-31 08:22:03,619 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:04,624 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:22:04,668 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:22:04,668 INFO [log.py(write:26)] - 
+2020-01-31 08:22:04,668 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.bUhY-qj8jBdAKxMu85Wju3nIAVoMrDgkbGMaIwGGqro', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.bbYRkKZ1P4IrVuvAOaHQGdCU5CVPD2B30A_Omye1BEo', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:22:04,668 INFO [log.py(write:26)] - 
+2020-01-31 08:22:04,669 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.bUhY-qj8jBdAKxMu85Wju3nIAVoMrDgkbGMaIwGGqro'}
+2020-01-31 08:22:04,669 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:22:04,669 INFO [log.py(write:26)] - 
+2020-01-31 08:22:04,669 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.bUhY-qj8jBdAKxMu85Wju3nIAVoMrDgkbGMaIwGGqro'}
+2020-01-31 08:22:04,669 INFO [log.py(write:26)] - 
+2020-01-31 08:22:04,669 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:05,672 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:05,722 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:05,723 INFO [log.py(write:26)] - 
+2020-01-31 08:22:05,723 INFO [log.py(write:26)] - 1223039231580962816
+2020-01-31 08:22:05,723 INFO [log.py(write:26)] - 
+2020-01-31 08:22:05,723 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:06,728 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:06,779 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:06,779 INFO [log.py(write:26)] - 
+2020-01-31 08:22:06,779 INFO [log.py(write:26)] - 1223039229588668416
+2020-01-31 08:22:06,779 INFO [log.py(write:26)] - 
+2020-01-31 08:22:06,780 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:07,780 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:22:07,821 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:22:07,821 INFO [log.py(write:26)] - 
+2020-01-31 08:22:07,821 INFO [log.py(write:26)] - 1223039235641049088
+2020-01-31 08:22:07,821 INFO [log.py(write:26)] - 
+2020-01-31 08:22:07,821 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:08,824 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:22:08,866 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:22:08,866 INFO [log.py(write:26)] - 
+2020-01-31 08:22:08,866 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ko2avIyAOKniAVRI0XUyPU7Re3KdScprMGdY-RPdGDs', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.qd5dMedO6JLW-3AA_u2W6EGd2EULfWctBgCVq8wKrDk', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:22:08,866 INFO [log.py(write:26)] - 
+2020-01-31 08:22:08,866 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ko2avIyAOKniAVRI0XUyPU7Re3KdScprMGdY-RPdGDs'}
+2020-01-31 08:22:08,867 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:22:08,867 INFO [log.py(write:26)] - 
+2020-01-31 08:22:08,867 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ko2avIyAOKniAVRI0XUyPU7Re3KdScprMGdY-RPdGDs'}
+2020-01-31 08:22:08,867 INFO [log.py(write:26)] - 
+2020-01-31 08:22:08,867 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:09,870 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:22:09,914 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:22:09,915 INFO [log.py(write:26)] - 
+2020-01-31 08:22:09,915 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Cm9rAOHTuyt9_4vKLOdEp_pDnzEASsoap2Zv1Y-0WYw', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2Mzk4NTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.2bRMGS6sC8EyPt8FAouONLNvF0WYn26srVJ_h4-efuw', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:22:09,915 INFO [log.py(write:26)] - 
+2020-01-31 08:22:09,915 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Cm9rAOHTuyt9_4vKLOdEp_pDnzEASsoap2Zv1Y-0WYw'}
+2020-01-31 08:22:09,915 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:22:09,916 INFO [log.py(write:26)] - 
+2020-01-31 08:22:09,916 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc0NTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Cm9rAOHTuyt9_4vKLOdEp_pDnzEASsoap2Zv1Y-0WYw'}
+2020-01-31 08:22:09,916 INFO [log.py(write:26)] - 
+2020-01-31 08:22:09,916 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:22:10,186 ERROR [log.py(write:37)] - KeyboardInterrupt
+2020-01-31 08:22:10,187 ERROR [log.py(write:37)] - 2020-01-31T00:22:10Z
+2020-01-31 08:22:10,187 ERROR [log.py(write:37)] - 
+2020-01-31 08:22:10,188 INFO [main.py(shutdown:532)] - Shutting down (exit code 0), bye.
+2020-01-31 08:22:10,188 INFO [main.py(shutdown:534)] - Cleaning up runner...
+2020-01-31 08:22:10,192 INFO [main.py(shutdown:537)] - Running teardowns...
+2020-01-31 08:30:27,805 INFO [main.py(main:486)] - Starting web monitor at *:8089
+2020-01-31 08:30:27,805 INFO [main.py(main:553)] - Starting Locust 0.11.0
+2020-01-31 08:30:52,296 INFO [runners.py(spawn_locusts:99)] - Hatching and swarming 1 clients at the rate 1 clients/s...
+2020-01-31 08:30:52,297 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: /mp/v1_0/authorizations
+2020-01-31 08:30:52,297 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: /mp/v1_0/articles
+2020-01-31 08:30:52,297 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:30:52,385 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:30:52,385 INFO [log.py(write:26)] - 
+2020-01-31 08:30:52,385 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5NzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.qenObCOsxFwLkhe_MTkZf49zXasDtzf5sfEYYtHyq7g', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzNzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.Zx3M-8zdVyzqJIjLeurTejnoz-R-trb557GBXz34ArU', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:30:52,385 INFO [log.py(write:26)] - 
+2020-01-31 08:30:52,386 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5NzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.qenObCOsxFwLkhe_MTkZf49zXasDtzf5sfEYYtHyq7g'}
+2020-01-31 08:30:52,386 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:30:52,386 INFO [log.py(write:26)] - 
+2020-01-31 08:30:52,386 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5NzcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.qenObCOsxFwLkhe_MTkZf49zXasDtzf5sfEYYtHyq7g'}
+2020-01-31 08:30:52,386 INFO [log.py(write:26)] - 
+2020-01-31 08:30:52,386 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:53,300 INFO [runners.py(hatch:106)] - All locusts hatched: UserRun: 1
+2020-01-31 08:30:53,391 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:30:53,443 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:30:53,443 INFO [log.py(write:26)] - 
+2020-01-31 08:30:53,444 INFO [log.py(write:26)] - 1223041438594367488
+2020-01-31 08:30:53,444 INFO [log.py(write:26)] - 
+2020-01-31 08:30:53,444 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:54,445 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:30:54,497 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:30:54,497 INFO [log.py(write:26)] - 
+2020-01-31 08:30:54,497 INFO [log.py(write:26)] - 1223041444680302592
+2020-01-31 08:30:54,497 INFO [log.py(write:26)] - 
+2020-01-31 08:30:54,497 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:55,498 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:30:55,551 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:30:55,551 INFO [log.py(write:26)] - 
+2020-01-31 08:30:55,551 INFO [log.py(write:26)] - 1223041447427571712
+2020-01-31 08:30:55,551 INFO [log.py(write:26)] - 
+2020-01-31 08:30:55,551 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:56,555 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:30:56,606 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:30:56,606 INFO [log.py(write:26)] - 
+2020-01-31 08:30:56,606 INFO [log.py(write:26)] - 1223041453530284032
+2020-01-31 08:30:56,607 INFO [log.py(write:26)] - 
+2020-01-31 08:30:56,607 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:57,610 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:30:57,702 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - 
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.FN2HO22-hn96-cEEROLxC6ee8gDLcK_JbuevwGbwj7c', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.jo8RkOTCX0sw7AV_TqapFpaUNN7H46ms0663vHkLBTw', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - 
+2020-01-31 08:30:57,703 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.FN2HO22-hn96-cEEROLxC6ee8gDLcK_JbuevwGbwj7c'}
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - 
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.FN2HO22-hn96-cEEROLxC6ee8gDLcK_JbuevwGbwj7c'}
+2020-01-31 08:30:57,703 INFO [log.py(write:26)] - 
+2020-01-31 08:30:57,703 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:58,708 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:30:58,743 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:30:58,744 INFO [log.py(write:26)] - 
+2020-01-31 08:30:58,744 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GwQ8Luo5ym94Kbp3uw9HBxvn9p2tI7z0do-YDmIVn_g', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.CYa1HZJHGUDV7b43ClynpLReq9AtDgmUZcp7O8gakjs', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:30:58,744 INFO [log.py(write:26)] - 
+2020-01-31 08:30:58,744 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GwQ8Luo5ym94Kbp3uw9HBxvn9p2tI7z0do-YDmIVn_g'}
+2020-01-31 08:30:58,744 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:30:58,744 INFO [log.py(write:26)] - 
+2020-01-31 08:30:58,745 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODEsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GwQ8Luo5ym94Kbp3uw9HBxvn9p2tI7z0do-YDmIVn_g'}
+2020-01-31 08:30:58,745 INFO [log.py(write:26)] - 
+2020-01-31 08:30:58,745 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:30:59,750 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:30:59,801 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:30:59,801 INFO [log.py(write:26)] - 
+2020-01-31 08:30:59,801 INFO [log.py(write:26)] - 1223041466935279616
+2020-01-31 08:30:59,801 INFO [log.py(write:26)] - 
+2020-01-31 08:30:59,801 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:00,805 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:00,854 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:00,854 INFO [log.py(write:26)] - 
+2020-01-31 08:31:00,854 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.T8IrQrI-xlOZMRcn6pidwy4ePF7_n328beSMeGyhr4Q', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.2D1R9bX6bx5BizomFXwOoIUreY4J0XXvaWl0wKhCzVw', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:00,854 INFO [log.py(write:26)] - 
+2020-01-31 08:31:00,855 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.T8IrQrI-xlOZMRcn6pidwy4ePF7_n328beSMeGyhr4Q'}
+2020-01-31 08:31:00,855 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:00,855 INFO [log.py(write:26)] - 
+2020-01-31 08:31:00,855 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODQsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.T8IrQrI-xlOZMRcn6pidwy4ePF7_n328beSMeGyhr4Q'}
+2020-01-31 08:31:00,855 INFO [log.py(write:26)] - 
+2020-01-31 08:31:00,855 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:01,857 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:01,900 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:01,900 INFO [log.py(write:26)] - 
+2020-01-31 08:31:01,900 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Hv5n6axfHApYiU8jCBDE3ZP5nREKTdt2rmgXr6BbBoI', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.SdTVORzgLj2FvTOd9pit6evTs0lJwMKos0DAtGz6Ygs', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:01,900 INFO [log.py(write:26)] - 
+2020-01-31 08:31:01,900 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Hv5n6axfHApYiU8jCBDE3ZP5nREKTdt2rmgXr6BbBoI'}
+2020-01-31 08:31:01,901 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:01,901 INFO [log.py(write:26)] - 
+2020-01-31 08:31:01,901 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Hv5n6axfHApYiU8jCBDE3ZP5nREKTdt2rmgXr6BbBoI'}
+2020-01-31 08:31:01,901 INFO [log.py(write:26)] - 
+2020-01-31 08:31:01,901 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:02,902 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:02,943 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:02,943 INFO [log.py(write:26)] - 
+2020-01-31 08:31:02,944 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.fdpUEnhoV72iH3fipBjDEEM_p_dAZkfyhtR5mbAXnEo', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:02,944 INFO [log.py(write:26)] - 
+2020-01-31 08:31:02,944 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE'}
+2020-01-31 08:31:02,944 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:02,944 INFO [log.py(write:26)] - 
+2020-01-31 08:31:02,945 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE'}
+2020-01-31 08:31:02,945 INFO [log.py(write:26)] - 
+2020-01-31 08:31:02,945 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:03,949 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:03,992 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:03,992 INFO [log.py(write:26)] - 
+2020-01-31 08:31:03,992 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.fdpUEnhoV72iH3fipBjDEEM_p_dAZkfyhtR5mbAXnEo', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:03,992 INFO [log.py(write:26)] - 
+2020-01-31 08:31:03,993 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE'}
+2020-01-31 08:31:03,993 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:03,993 INFO [log.py(write:26)] - 
+2020-01-31 08:31:03,993 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.GsGjsH0_B4VCv-HOaxPIhZXuTu53gwREbcripUJhfKE'}
+2020-01-31 08:31:03,993 INFO [log.py(write:26)] - 
+2020-01-31 08:31:03,993 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:04,998 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:05,044 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:05,044 INFO [log.py(write:26)] - 
+2020-01-31 08:31:05,045 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Oel2r_14MzIyBpUu-mpPd-j3aA8uojWDb1nt-ltQP74', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.r0glRHWogOWwEQSOINFliP22kDZpZK_kuWuYX2bjJBo', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:05,045 INFO [log.py(write:26)] - 
+2020-01-31 08:31:05,045 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Oel2r_14MzIyBpUu-mpPd-j3aA8uojWDb1nt-ltQP74'}
+2020-01-31 08:31:05,045 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:05,045 INFO [log.py(write:26)] - 
+2020-01-31 08:31:05,045 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Oel2r_14MzIyBpUu-mpPd-j3aA8uojWDb1nt-ltQP74'}
+2020-01-31 08:31:05,046 INFO [log.py(write:26)] - 
+2020-01-31 08:31:05,046 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:06,047 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:31:06,093 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:31:06,093 INFO [log.py(write:26)] - 
+2020-01-31 08:31:06,093 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.oqO_0Ar57rqucAw6EoOV76b3crPOTL64I9OforMKNVQ', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDAzODksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.V_u4w9cuWTjeFUW8vGpnK1j_aKjvuY9CZQjinkCk6Ls', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:31:06,094 INFO [log.py(write:26)] - 
+2020-01-31 08:31:06,094 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.oqO_0Ar57rqucAw6EoOV76b3crPOTL64I9OforMKNVQ'}
+2020-01-31 08:31:06,094 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:31:06,094 INFO [log.py(write:26)] - 
+2020-01-31 08:31:06,094 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzc5ODksInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.oqO_0Ar57rqucAw6EoOV76b3crPOTL64I9OforMKNVQ'}
+2020-01-31 08:31:06,094 INFO [log.py(write:26)] - 
+2020-01-31 08:31:06,094 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:31:07,096 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:31:07,103 ERROR [log.py(write:37)] - KeyboardInterrupt
+2020-01-31 08:31:07,103 ERROR [log.py(write:37)] - 2020-01-31T00:31:07Z
+2020-01-31 08:31:07,103 ERROR [log.py(write:37)] - 
+2020-01-31 08:31:07,104 INFO [main.py(shutdown:532)] - Shutting down (exit code 0), bye.
+2020-01-31 08:31:07,104 INFO [main.py(shutdown:534)] - Cleaning up runner...
+2020-01-31 08:31:07,107 INFO [main.py(shutdown:537)] - Running teardowns...
+2020-01-31 08:40:58,118 INFO [main.py(main:486)] - Starting web monitor at *:8089
+2020-01-31 08:40:58,118 INFO [main.py(main:553)] - Starting Locust 0.11.0
+2020-01-31 08:41:22,326 INFO [runners.py(spawn_locusts:99)] - Hatching and swarming 1 clients at the rate 1 clients/s...
+2020-01-31 08:41:22,327 INFO [api_mp.py(__init__:14)] - 正在初始化自媒体登录url: /mp/v1_0/authorizations
+2020-01-31 08:41:22,327 INFO [api_mp.py(__init__:17)] - 正在初始化自媒体发布文章url: /mp/v1_0/articles
+2020-01-31 08:41:22,327 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:22,456 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:22,457 INFO [log.py(write:26)] - 
+2020-01-31 08:41:22,457 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ObuItsikRD0VjKYnrAp3Myg6UZQ7SVpZZ5zwozKZ3Bg', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMDcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.MK6ezmrh7qWgpv91R8BNCRGkRH9NNFChLCQeR4s6GzE', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:22,457 INFO [log.py(write:26)] - 
+2020-01-31 08:41:22,457 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ObuItsikRD0VjKYnrAp3Myg6UZQ7SVpZZ5zwozKZ3Bg'}
+2020-01-31 08:41:22,457 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:22,458 INFO [log.py(write:26)] - 
+2020-01-31 08:41:22,458 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.ObuItsikRD0VjKYnrAp3Myg6UZQ7SVpZZ5zwozKZ3Bg'}
+2020-01-31 08:41:22,458 INFO [log.py(write:26)] - 
+2020-01-31 08:41:22,458 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:23,329 INFO [runners.py(hatch:106)] - All locusts hatched: UserRun: 1
+2020-01-31 08:41:23,463 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:23,505 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:23,506 INFO [log.py(write:26)] - 
+2020-01-31 08:41:23,506 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDYsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Tp8Ssju_K4q488Rz1mwP1DwrWfcJGUOQK0QrxPrCm1I', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMDYsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.qTXTArpvPgr_4NEEVR7P9SBlQCMARMqr8WyKUpcXTno', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:23,506 INFO [log.py(write:26)] - 
+2020-01-31 08:41:23,506 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDYsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Tp8Ssju_K4q488Rz1mwP1DwrWfcJGUOQK0QrxPrCm1I'}
+2020-01-31 08:41:23,506 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:23,507 INFO [log.py(write:26)] - 
+2020-01-31 08:41:23,507 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDYsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.Tp8Ssju_K4q488Rz1mwP1DwrWfcJGUOQK0QrxPrCm1I'}
+2020-01-31 08:41:23,507 INFO [log.py(write:26)] - 
+2020-01-31 08:41:23,507 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:24,512 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:41:24,566 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:41:24,567 INFO [log.py(write:26)] - 
+2020-01-31 08:41:24,567 INFO [log.py(write:26)] - 1223044087460921344
+2020-01-31 08:41:24,567 INFO [log.py(write:26)] - 
+2020-01-31 08:41:24,567 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:25,572 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:25,619 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:25,619 INFO [log.py(write:26)] - 
+2020-01-31 08:41:25,620 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._ofdgdhwahSJWre8GhIC9Dxy9QEnKdae-EzMHzL86XQ', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.jNT2DW0QszVEeSEa5I6D3Vc_nCZJUBBjIInMq5eWbuA', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:25,620 INFO [log.py(write:26)] - 
+2020-01-31 08:41:25,620 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._ofdgdhwahSJWre8GhIC9Dxy9QEnKdae-EzMHzL86XQ'}
+2020-01-31 08:41:25,620 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:25,620 INFO [log.py(write:26)] - 
+2020-01-31 08:41:25,620 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MDgsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._ofdgdhwahSJWre8GhIC9Dxy9QEnKdae-EzMHzL86XQ'}
+2020-01-31 08:41:25,621 INFO [log.py(write:26)] - 
+2020-01-31 08:41:25,621 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:26,625 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:41:26,713 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:41:26,713 INFO [log.py(write:26)] - 
+2020-01-31 08:41:26,713 INFO [log.py(write:26)] - 1223044096482869248
+2020-01-31 08:41:26,713 INFO [log.py(write:26)] - 
+2020-01-31 08:41:26,713 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:27,717 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:27,760 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:27,760 INFO [log.py(write:26)] - 
+2020-01-31 08:41:27,760 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.g_LrkQdYxjtzBdGKXj9LhFJ_JMfMFt1Esg8UHWcufyg', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.drPI9lDtg5hfv1MSCpvvRUy70YBLjww8HjG_Aoluj-k', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:27,760 INFO [log.py(write:26)] - 
+2020-01-31 08:41:27,760 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.g_LrkQdYxjtzBdGKXj9LhFJ_JMfMFt1Esg8UHWcufyg'}
+2020-01-31 08:41:27,761 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:27,761 INFO [log.py(write:26)] - 
+2020-01-31 08:41:27,761 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTIsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.g_LrkQdYxjtzBdGKXj9LhFJ_JMfMFt1Esg8UHWcufyg'}
+2020-01-31 08:41:27,761 INFO [log.py(write:26)] - 
+2020-01-31 08:41:27,761 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:28,763 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:41:28,812 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:41:28,812 INFO [log.py(write:26)] - 
+2020-01-31 08:41:28,812 INFO [log.py(write:26)] - 1223044103613186048
+2020-01-31 08:41:28,813 INFO [log.py(write:26)] - 
+2020-01-31 08:41:28,813 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:29,818 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:29,861 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:29,861 INFO [log.py(write:26)] - 
+2020-01-31 08:41:29,862 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.2VSKntRvho1Cc8ebu5N6d5JC9cF2XSmO0lcaGtDpBI4', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.cDpa4jYf5QEviOy_7fuhwT1RvVjiZoe5F8tjQs2B9rM', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:29,862 INFO [log.py(write:26)] - 
+2020-01-31 08:41:29,862 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.2VSKntRvho1Cc8ebu5N6d5JC9cF2XSmO0lcaGtDpBI4'}
+2020-01-31 08:41:29,862 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:29,862 INFO [log.py(write:26)] - 
+2020-01-31 08:41:29,862 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTMsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.2VSKntRvho1Cc8ebu5N6d5JC9cF2XSmO0lcaGtDpBI4'}
+2020-01-31 08:41:29,863 INFO [log.py(write:26)] - 
+2020-01-31 08:41:29,863 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:30,868 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:41:30,916 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:41:30,916 INFO [log.py(write:26)] - 
+2020-01-31 08:41:30,916 INFO [log.py(write:26)] - 1223044112446390272
+2020-01-31 08:41:30,916 INFO [log.py(write:26)] - 
+2020-01-31 08:41:30,916 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:31,919 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:31,962 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:31,962 INFO [log.py(write:26)] - 
+2020-01-31 08:41:31,962 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._eYsv9MCII9HzCDQ1Y1L9590ixm1WeI3TJaKMF7JXjQ', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMTUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.cSG5tM0hy-nWEbiTHx1yalXOxGFNmwkGnQrVzwR1pSU', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:31,962 INFO [log.py(write:26)] - 
+2020-01-31 08:41:31,963 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._eYsv9MCII9HzCDQ1Y1L9590ixm1WeI3TJaKMF7JXjQ'}
+2020-01-31 08:41:31,963 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:31,963 INFO [log.py(write:26)] - 
+2020-01-31 08:41:31,963 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTUsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0._eYsv9MCII9HzCDQ1Y1L9590ixm1WeI3TJaKMF7JXjQ'}
+2020-01-31 08:41:31,963 INFO [log.py(write:26)] - 
+2020-01-31 08:41:31,963 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:32,966 INFO [api_mp.py(api_mp_article:43)] - 正在调用自媒体发布文章接口，请求数据：{'title': 'test-inter-001', 'content': '今天天气不错，适合做接口测试！', 'channel_id': '7', 'cover': {'type': 0, 'images': []}}
+2020-01-31 08:41:33,073 INFO [log.py(write:26)] - 发布文章成功后的id值为：
+2020-01-31 08:41:33,074 INFO [log.py(write:26)] - 
+2020-01-31 08:41:33,074 INFO [log.py(write:26)] - 1223044127663325184
+2020-01-31 08:41:33,074 INFO [log.py(write:26)] - 
+2020-01-31 08:41:33,074 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:34,078 INFO [api_mp.py(api_mp_login:28)] - 正在调用自媒体登录接口，请求数据：{'mobile': '13812345678', 'code': '246810'}
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - 登录的结果为：
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - 
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - {'message': 'OK', 'data': {'token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.t2vqAUbGbEtwUIb6DVUtdKs2HTx9p1x-rn1T6BYc7sA', 'refresh_token': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODE2NDEwMTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOnRydWUsInZlcmlmaWVkIjp0cnVlfQ.mXeaWRNbFvmYJBqf4mWCDMx6gl_tqkqChPnmnm3X38I', 'id': 1206755653360549888, 'name': '13812345678', 'photo': 'http://toutiao.meiduo.site/FlbDBH8uoPpUPUX00XKwqXWVewGM'}}
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - 
+2020-01-31 08:41:34,123 INFO [tool.py(common_token:15)] - 正在提取token， 提取后的header为：{'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.t2vqAUbGbEtwUIb6DVUtdKs2HTx9p1x-rn1T6BYc7sA'}
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - 添加token后的headers为：
+2020-01-31 08:41:34,123 INFO [log.py(write:26)] - 
+2020-01-31 08:41:34,124 INFO [log.py(write:26)] - {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODA0Mzg2MTcsInVzZXJfaWQiOjEyMDY3NTU2NTMzNjA1NDk4ODgsInJlZnJlc2giOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZX0.t2vqAUbGbEtwUIb6DVUtdKs2HTx9p1x-rn1T6BYc7sA'}
+2020-01-31 08:41:34,124 INFO [log.py(write:26)] - 
+2020-01-31 08:41:34,124 INFO [tool.py(common_assert:21)] - 正在调用公共断言方法！
+2020-01-31 08:41:34,671 ERROR [log.py(write:37)] - KeyboardInterrupt
+2020-01-31 08:41:34,671 ERROR [log.py(write:37)] - 2020-01-31T00:41:34Z
+2020-01-31 08:41:34,671 ERROR [log.py(write:37)] - 
+2020-01-31 08:41:34,672 INFO [main.py(shutdown:532)] - Shutting down (exit code 0), bye.
+2020-01-31 08:41:34,672 INFO [main.py(shutdown:534)] - Cleaning up runner...
+2020-01-31 08:41:34,672 INFO [main.py(shutdown:537)] - Running teardowns...
